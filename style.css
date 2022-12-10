@@ -1,0 +1,129 @@
+:root{
+    --primary-sb: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --neutral-vdb-mbg: hsl(217, 54%, 11%);
+    --neutral-vdb-cbg: hsl(216, 50%, 16%);
+    --neutral-vdb-line: hsl(215, 32%, 27%);
+    --font: 'Outfit', sans-serif;
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font);
+    font-size: 18px;
+    background-color: var(--neutral-vdb-mbg);
+    color: var(--primary-sb);
+    font-weight: 300;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.7s;
+}
+
+.author-name{
+    color: white;
+    cursor: pointer;
+    transition: color 0.7s;
+}
+
+h1:hover, .author-name:hover{
+    color: var(--primary-cyan);
+}
+
+
+.nft-container{
+    display: grid;
+    background-color: var(--neutral-vdb-cbg);
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 0 20px 20px 40px hsl(217, 54%, 10%);
+    margin: 20px;
+    min-width: 300px;
+}
+
+.nft-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nft-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nft-price p{
+    display: flex;
+    align-items: center;
+}
+
+.nft-price p:first-child{
+    color: var(--primary-cyan);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nft-price p img{
+    margin-right: 7px;
+}
+
+.author-container{
+    display: flex;
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 70px;
+    border-top-color: var(--neutral-vdb-line);
+    overflow: hidden;
+}
+
+.author-img{
+    border: solid 1px white;
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 15px;
+}
+
+.image-container{
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.view-icon-container{
+    position: absolute;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    opacity: 0;
+    place-items: center;
+    cursor: pointer;
+    transition: opacity 0.7s;
+}
+
+.view-icon-container:hover{
+    opacity: 1;
+}
